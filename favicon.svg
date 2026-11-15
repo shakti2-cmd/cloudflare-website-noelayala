@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="NA monogram">
+  <rect width="64" height="64" rx="14" fill="#0D1117"/>
+  <rect x="2" y="2" width="60" height="60" rx="12" fill="none" stroke="#30363D" stroke-width="2"/>
+  <path d="M16 44V20h5.2l11.2 15.2V20h5v24h-5.2L21 28.8V44h-5z" fill="#E6EDF3"/>
+  <path d="M40.5 44L47 20h4.5L58 44h-4.8l-1.2-5h-6.4l-1.2 5h-3.9zm6.1-9h4.6l-2.3-9.5-2.3 9.5z" fill="#58A6FF"/>
+</svg>

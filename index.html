@@ -1,212 +1,510 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Noel Ayala — Digital Operations & Automation Specialist</title>
-  <style>
-    :root {
-      --bg: #0f172a;
-      --surface: #1e293b;
-      --text: #f8fafc;
-      --muted: #94a3b8;
-      --accent: #38bdf8;
-      --border: #334155;
+  <title>Noel Ayala — Digital Operations &amp; Automation Specialist</title>
+  <meta
+    name="description"
+    content="Resume of Noel Ayala — Digital Operations & Automation Specialist in Davao Region, Philippines. Serverless automation engines, Google Workspace orchestration, Gemini APIs, and custom Rust/Tauri tools."
+  />
+  <meta property="og:title" content="Noel Ayala — Digital Operations &amp; Automation Specialist" />
+  <meta
+    property="og:description"
+    content="Digital Operations and Automation Specialist building serverless automation engines, Google Workspace orchestration pipelines, and custom operational utilities."
+  />
+  <meta property="og:type" content="profile" />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("noel_resume_theme");
+        if (t === "light" || t === "dark") {
+          document.documentElement.setAttribute("data-theme", t);
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="./styles.css" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Noel Ayala",
+      "jobTitle": "Digital Operations & Automation Specialist",
+      "email": "mailto:noeljedayala@gmail.com",
+      "sameAs": ["https://github.com/shakti2-cmd"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Davao Region",
+        "addressCountry": "PH"
+      },
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Informatics International College"
+      }
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      padding: 2rem 1rem;
-    }
-    .container {
-      max-width: 820px;
-      margin: 0 auto;
-    }
-    header {
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 2rem;
-      margin-bottom: 2.5rem;
-    }
-    h1 {
-      font-size: 2.25rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-    .subtitle {
-      color: var(--accent);
-      font-size: 1.15rem;
-      font-weight: 500;
-      margin-top: 0.25rem;
-    }
-    .meta {
-      color: var(--muted);
-      font-size: 0.9rem;
-      margin-top: 0.75rem;
-    }
-    .meta a {
-      color: var(--text);
-      text-decoration: none;
-      border-bottom: 1px dotted var(--accent);
-    }
-    h2 {
-      font-size: 1.1rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--accent);
-      margin-bottom: 1.25rem;
-    }
-    section {
-      margin-bottom: 2.75rem;
-    }
-    .item {
-      margin-bottom: 1.75rem;
-    }
-    .item-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-    .item-title {
-      font-weight: 600;
-      font-size: 1.05rem;
-    }
-    .item-date {
-      color: var(--muted);
-      font-size: 0.875rem;
-    }
-    .item-org {
-      color: var(--muted);
-      font-size: 0.95rem;
-      margin-bottom: 0.5rem;
-    }
-    ul {
-      padding-left: 1.25rem;
-      color: #cbd5e1;
-    }
-    li {
-      margin-bottom: 0.4rem;
-    }
-    .skills-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-    .tag {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 0.35rem 0.75rem;
-      border-radius: 6px;
-      font-size: 0.85rem;
-      color: #e2e8f0;
-    }
-    footer {
-      border-top: 1px solid var(--border);
-      padding-top: 1.5rem;
-      color: var(--muted);
-      font-size: 0.85rem;
-      text-align: center;
-    }
-  </style>
+  </script>
+  <script src="./app.js" defer></script>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Noel Ayala</h1>
-      <div class="subtitle">Digital Operations &amp; Automation Specialist</div>
-      <div class="meta">
-        Davao Region, Philippines &bull;
-        <a href="mailto:noeljedayala@gmail.com">noeljedayala@gmail.com</a> &bull;
-        <a href="https://github.com/shakti2-cmd" target="_blank">github.com/shakti2-cmd</a>
-      </div>
-    </header>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <section>
-      <h2>Summary</h2>
-      <p style="color: #cbd5e1;">
-        Digital Operations and Automation Specialist with a background in IT, remote project coordination, and visual design. Experienced in building serverless automation engines, Google Workspace orchestration pipelines, and custom desktop utilities that eliminate repetitive operational bottlenecks.
-      </p>
-    </section>
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="brand-link" href="#summary" aria-label="Noel Ayala home">
+        <span class="brand-mark" aria-hidden="true">NA</span>
+        <span class="brand-text">
+          <span class="brand-name">Noel Ayala</span>
+          <span class="brand-role">Automation &amp; Ops</span>
+        </span>
+      </a>
 
-    <section>
-      <h2>Experience</h2>
-
-      <div class="item">
-        <div class="item-header">
-          <span class="item-title">Digital Operations &amp; Automation Specialist</span>
-          <span class="item-date">2024 – Present</span>
-        </div>
-        <div class="item-org">Remote / Independent</div>
-        <ul>
-          <li>Architect zero-cost, serverless automation engines using Google Apps Script, Google Sheets, Telegram Bot API, and Gemini APIs.</li>
-          <li>Design autonomous multi-agent lead generation, data enrichment, and B2B email outreach pipelines with structured review workflows.</li>
-          <li>Build custom desktop and telemetry tools including real-time meeting co-pilots (Rust/Tauri/React) and automated OSINT monitoring systems.</li>
+      <nav aria-label="Primary resume sections">
+        <ul class="nav-links">
+          <li><a class="nav-link is-active" href="#summary">Summary</a></li>
+          <li><a class="nav-link" href="#experience">Experience</a></li>
+          <li><a class="nav-link" href="#stack">Stack</a></li>
+          <li><a class="nav-link" href="#credentials">Credentials</a></li>
         </ul>
-      </div>
+      </nav>
 
-      <div class="item">
-        <div class="item-header">
-          <span class="item-title">Digital Project Coordinator &amp; Virtual Specialist</span>
-          <span class="item-date">2017 – 2024</span>
-        </div>
-        <div class="item-org">Remote &bull; Bagong Lumad Artists Foundation / E-Commerce Brands</div>
-        <ul>
-          <li>Managed stakeholder communications and operational logistics for Bagong Lumad initiatives in coordination with the United Nations Development Programme (UNDP) on the Mindanao Timeline project.</li>
-          <li>Managed web storefronts, product catalogs, and digital operations for retail brands including Retrospec, Oliver Logan, and DD Apparel LLC.</li>
-        </ul>
-      </div>
+      <div class="nav-actions">
+        <button
+          id="theme-toggle"
+          class="btn btn-icon"
+          type="button"
+          aria-pressed="false"
+          aria-label="Switch to Minimal light theme"
+          title="Switch theme"
+        >
+          <svg id="icon-sun" class="icon icon-circle" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+          </svg>
+          <svg id="icon-moon" class="icon" viewBox="0 0 24 24" aria-hidden="true" style="display: none;">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"></path>
+          </svg>
+        </button>
 
-      <div class="item">
-        <div class="item-header">
-          <span class="item-title">Freelance Graphic Designer &amp; Digital Production Specialist</span>
-          <span class="item-date">2012 – 2017</span>
+        <button class="btn btn-ghost btn-print" type="button" data-print-resume>
+          <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 9V2h12v7"></path>
+            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+            <rect x="6" y="14" width="12" height="8"></rect>
+          </svg>
+          <span>Print CV</span>
+        </button>
+
+        <a class="btn btn-primary" href="mailto:noeljedayala@gmail.com">
+          <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+          </svg>
+          <span>Email</span>
+        </a>
+
+        <button
+          id="mobile-menu-btn"
+          class="btn btn-icon mobile-menu-btn"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-drawer"
+          aria-label="Toggle navigation menu"
+        >
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-drawer" class="mobile-drawer" hidden>
+      <ul class="mobile-drawer-list">
+        <li><a class="mobile-drawer-link is-active" href="#summary">Summary</a></li>
+        <li><a class="mobile-drawer-link" href="#experience">Experience</a></li>
+        <li><a class="mobile-drawer-link" href="#stack">Technical Stack</a></li>
+        <li><a class="mobile-drawer-link" href="#credentials">Education &amp; Credentials</a></li>
+        <li>
+          <button class="btn btn-secondary" type="button" data-print-resume style="width: 100%; margin-top: 6px;">
+            Print / Save Resume PDF
+          </button>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="summary" class="hero-section">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow-pill">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span>Digital Operations &amp; Automation Specialist</span>
+          </div>
+
+          <h1 class="hero-title">Noel Ayala</h1>
+          <p class="hero-subtitle">
+            Serverless automation engines, Google Workspace orchestration, and custom desktop utilities.
+          </p>
+          <p class="hero-summary">
+            Digital Operations and Automation Specialist with a background in IT, remote project coordination, and visual design. Experienced in building serverless automation engines, Google Workspace orchestration pipelines, and custom desktop utilities that eliminate repetitive operational bottlenecks.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="mailto:noeljedayala@gmail.com">
+              <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+              <span>Contact via Email</span>
+            </a>
+
+            <button class="btn btn-secondary" type="button" data-copy-email>
+              <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="9" y="9" width="13" height="13" rx="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span data-copy-label>Copy Email</span>
+            </button>
+
+            <a
+              class="btn btn-ghost"
+              href="https://github.com/shakti2-cmd"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                <path d="M9 18c-4.51 2-5-2-7-2"></path>
+              </svg>
+              <span>GitHub</span>
+            </a>
+          </div>
+
+          <div class="hero-meta">
+            <span class="meta-item">
+              <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                <circle class="icon-circle" cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Davao Region, Philippines</span>
+            </span>
+            <span class="meta-item">
+              <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+              <a class="meta-link" href="mailto:noeljedayala@gmail.com">noeljedayala@gmail.com</a>
+            </span>
+            <span class="meta-item">
+              <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+              </svg>
+              <a
+                class="meta-link"
+                href="https://github.com/shakti2-cmd"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                github.com/shakti2-cmd
+              </a>
+            </span>
+          </div>
         </div>
-        <div class="item-org">Independent</div>
-        <ul>
-          <li>Created marketing collateral, pitch decks, and digital production assets for clients including Shoalhaven City Turf Club, Erehwon Center for the Arts, and Daloy ng Buhay, Inc.</li>
-        </ul>
+
+        <aside class="manifest-card" aria-label="Executive profile snapshot">
+          <div class="manifest-header">
+            <span class="manifest-title">Profile Snapshot</span>
+            <span class="manifest-badge">2012 – Present</span>
+          </div>
+          <div class="manifest-list">
+            <div class="manifest-row">
+              <span class="manifest-key">Focus</span>
+              <span class="manifest-val">
+                Serverless &amp; Multi-Agent Ops
+                <span class="manifest-sub">Zero-cost automation &amp; B2B pipeline orchestration</span>
+              </span>
+            </div>
+            <div class="manifest-row">
+              <span class="manifest-key">Core Stack</span>
+              <span class="manifest-val">
+                Apps Script · Gemini · Rust/Tauri
+                <span class="manifest-sub">Google Workspace, Telegram API, React / Vite</span>
+              </span>
+            </div>
+            <div class="manifest-row">
+              <span class="manifest-key">Background</span>
+              <span class="manifest-val">
+                IT, Remote Ops &amp; Visual Design
+                <span class="manifest-sub">UNDP project logistics &amp; e-commerce operations</span>
+              </span>
+            </div>
+            <div class="manifest-row">
+              <span class="manifest-key">Education</span>
+              <span class="manifest-val">
+                B.S. in Information Technology
+                <span class="manifest-sub">Informatics International College (2006 – 2012)</span>
+              </span>
+            </div>
+            <div class="manifest-row">
+              <span class="manifest-key">Credential</span>
+              <span class="manifest-val">
+                PRC-REB #0011812
+                <span class="manifest-sub">Licensed Real Estate Broker, Philippines</span>
+              </span>
+            </div>
+          </div>
+        </aside>
       </div>
     </section>
 
-    <section>
-      <h2>Technical Stack</h2>
-      <div class="skills-grid">
-        <span class="tag">Google Apps Script</span>
-        <span class="tag">Google Workspace Orchestration</span>
-        <span class="tag">Gemini &amp; LLM APIs</span>
-        <span class="tag">JavaScript / TypeScript</span>
-        <span class="tag">Rust &amp; Tauri</span>
-        <span class="tag">React / Vite</span>
-        <span class="tag">HTML / CSS</span>
-        <span class="tag">Git &amp; Cloudflare Pages</span>
-        <span class="tag">Telegram Bot API</span>
+    <section id="experience" class="resume-section">
+      <div class="container section-grid">
+        <div class="section-rail">
+          <span class="section-kicker">01 / Experience</span>
+          <h2 class="section-heading">Career History</h2>
+          <p class="section-note">
+            Progression across graphic production, international project coordination, e-commerce operations, and serverless AI systems.
+          </p>
+        </div>
+
+        <div class="timeline-list">
+          <article class="experience-card is-current" data-reveal>
+            <span class="timeline-node" aria-hidden="true"></span>
+            <div class="role-header">
+              <h3 class="role-title">Digital Operations &amp; Automation Specialist</h3>
+              <span class="role-date">2024 – Present</span>
+            </div>
+            <div class="role-org">Remote / Independent</div>
+            <ul class="role-bullets">
+              <li>
+                Architect zero-cost, serverless automation engines using Google Apps Script, Google Sheets, Telegram Bot API, and Gemini APIs.
+              </li>
+              <li>
+                Design autonomous multi-agent lead generation, data enrichment, and B2B email outreach pipelines with structured review workflows.
+              </li>
+              <li>
+                Build custom desktop and telemetry tools including real-time meeting co-pilots (Rust/Tauri/React) and automated OSINT monitoring systems.
+              </li>
+            </ul>
+            <div class="role-tags" aria-label="Systems and technologies used">
+              <span class="chip">Google Apps Script</span>
+              <span class="chip">Google Sheets</span>
+              <span class="chip">Telegram Bot API</span>
+              <span class="chip">Gemini APIs</span>
+              <span class="chip">Rust / Tauri / React</span>
+            </div>
+          </article>
+
+          <article class="experience-card" data-reveal>
+            <span class="timeline-node" aria-hidden="true"></span>
+            <div class="role-header">
+              <h3 class="role-title">Digital Project Coordinator &amp; Virtual Specialist</h3>
+              <span class="role-date">2017 – 2024</span>
+            </div>
+            <div class="role-org">Remote &bull; Bagong Lumad Artists Foundation / E-Commerce Brands</div>
+            <ul class="role-bullets">
+              <li>
+                Managed stakeholder communications and operational logistics for Bagong Lumad initiatives in coordination with the United Nations Development Programme (UNDP) on the Mindanao Timeline project.
+              </li>
+              <li>
+                Managed web storefronts, product catalogs, and digital operations for retail brands including Retrospec, Oliver Logan, and DD Apparel LLC.
+              </li>
+            </ul>
+            <div class="role-tags" aria-label="Key programs and brands">
+              <span class="chip">UNDP Mindanao Timeline</span>
+              <span class="chip">Retrospec</span>
+              <span class="chip">Oliver Logan</span>
+              <span class="chip">DD Apparel LLC</span>
+            </div>
+          </article>
+
+          <article class="experience-card" data-reveal>
+            <span class="timeline-node" aria-hidden="true"></span>
+            <div class="role-header">
+              <h3 class="role-title">Freelance Graphic Designer &amp; Digital Production Specialist</h3>
+              <span class="role-date">2012 – 2017</span>
+            </div>
+            <div class="role-org">Independent</div>
+            <ul class="role-bullets">
+              <li>
+                Created marketing collateral, pitch decks, and digital production assets for clients including Shoalhaven City Turf Club, Erehwon Center for the Arts, and Daloy ng Buhay, Inc.
+              </li>
+            </ul>
+            <div class="role-tags" aria-label="Selected clients">
+              <span class="chip">Shoalhaven City Turf Club</span>
+              <span class="chip">Erehwon Center for the Arts</span>
+              <span class="chip">Daloy ng Buhay, Inc.</span>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section>
-      <h2>Education &amp; Credentials</h2>
-      <div class="item">
-        <div class="item-header">
-          <span class="item-title">B.S. in Information Technology</span>
-          <span class="item-date">2006 – 2012</span>
+    <section id="stack" class="resume-section">
+      <div class="container section-grid">
+        <div class="section-rail">
+          <span class="section-kicker">02 / Technical Stack</span>
+          <h2 class="section-heading">Systems &amp; Tooling</h2>
+          <p class="section-note">
+            Core platforms, languages, and deployment tooling used to ship automation pipelines and lightweight web/desktop utilities.
+          </p>
         </div>
-        <div class="item-org">Informatics International College</div>
-      </div>
-      <div class="item">
-        <div class="item-header">
-          <span class="item-title">Licensed Real Estate Broker (PRC-REB #0011812)</span>
-          <span class="item-date">Philippines</span>
+
+        <div class="stack-grid">
+          <article class="stack-card" data-reveal>
+            <div class="stack-card-head">
+              <div class="stack-icon-wrap" aria-hidden="true">
+                <svg class="icon" viewBox="0 0 24 24">
+                  <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+                </svg>
+              </div>
+              <h3 class="stack-card-title">Automation &amp; AI</h3>
+            </div>
+            <ul class="stack-items">
+              <li class="stack-item">Google Apps Script</li>
+              <li class="stack-item">Google Workspace Orchestration</li>
+              <li class="stack-item">Gemini &amp; LLM APIs</li>
+              <li class="stack-item">Telegram Bot API</li>
+            </ul>
+          </article>
+
+          <article class="stack-card" data-reveal>
+            <div class="stack-card-head">
+              <div class="stack-icon-wrap" aria-hidden="true">
+                <svg class="icon" viewBox="0 0 24 24">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h3 class="stack-card-title">Application Engineering</h3>
+            </div>
+            <ul class="stack-items">
+              <li class="stack-item">JavaScript / TypeScript</li>
+              <li class="stack-item">Rust &amp; Tauri</li>
+              <li class="stack-item">React / Vite</li>
+            </ul>
+          </article>
+
+          <article class="stack-card" data-reveal>
+            <div class="stack-card-head">
+              <div class="stack-icon-wrap" aria-hidden="true">
+                <svg class="icon" viewBox="0 0 24 24">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+              <h3 class="stack-card-title">Web &amp; Infrastructure</h3>
+            </div>
+            <ul class="stack-items">
+              <li class="stack-item">HTML / CSS</li>
+              <li class="stack-item">Git &amp; Cloudflare Pages</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
 
-    <footer>
-      &copy; 2026 Noel Ayala. Hosted on Cloudflare.
-    </footer>
-  </div>
+    <section id="credentials" class="resume-section">
+      <div class="container section-grid">
+        <div class="section-rail">
+          <span class="section-kicker">03 / Background</span>
+          <h2 class="section-heading">Education &amp; Credentials</h2>
+          <p class="section-note">
+            Academic foundation in information technology and regulated professional licensing in the Philippines.
+          </p>
+        </div>
+
+        <div class="credentials-grid">
+          <article class="credential-card" data-reveal>
+            <div class="credential-top">
+              <div class="credential-icon" aria-hidden="true">
+                <svg class="icon" viewBox="0 0 24 24">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+              </div>
+              <span class="role-date">2006 – 2012</span>
+            </div>
+            <div>
+              <h3 class="credential-title">B.S. in Information Technology</h3>
+              <p class="credential-org">Informatics International College</p>
+            </div>
+          </article>
+
+          <article class="credential-card" data-reveal>
+            <div class="credential-top">
+              <div class="credential-icon" aria-hidden="true">
+                <svg class="icon" viewBox="0 0 24 24">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <path d="m9 12 2 2 4-4"></path>
+                </svg>
+              </div>
+              <span class="role-date">Philippines</span>
+            </div>
+            <div>
+              <h3 class="credential-title">Licensed Real Estate Broker</h3>
+              <p class="credential-org">PRC-REB #0011812</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" aria-label="Direct contact">
+      <div class="container">
+        <div class="cta-card" data-reveal>
+          <div class="cta-copy">
+            <h2 class="cta-heading">Direct Contact</h2>
+            <p class="cta-text">
+              Reach out by email for digital operations, workflow automation architecture, or custom operational tooling inquiries.
+            </p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="mailto:noeljedayala@gmail.com">
+              <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+              <span>noeljedayala@gmail.com</span>
+            </a>
+            <button class="btn btn-secondary" type="button" data-copy-email>
+              <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="9" y="9" width="13" height="13" rx="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span data-copy-label>Copy Address</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>&copy; 2026 Noel Ayala &bull; Davao Region, Philippines</span>
+      <div class="footer-right">
+        <span>Hosted on Cloudflare Pages</span>
+        <a class="back-to-top" href="#summary" aria-label="Back to top">
+          <span>Top</span>
+          <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m18 15-6-6-6 6"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="copy-status-live" class="sr-only" role="status" aria-live="polite"></div>
 </body>
 </html>
