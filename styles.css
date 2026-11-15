@@ -1055,6 +1055,129 @@ body {
   display: none;
 }
 
+/* ==========================================================================
+   Contact Form Card
+   ========================================================================== */
+
+.contact-form-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-interactive);
+  border-radius: var(--radius-card);
+  padding: 24px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-headline);
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 14px;
+  border-radius: var(--radius-btn);
+  border: 1px solid var(--color-border-interactive);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  transition: border-color var(--duration-fast) var(--ease-standard),
+              background-color var(--duration-fast) var(--ease-standard);
+}
+
+.form-textarea {
+  min-height: 124px;
+  resize: vertical;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--color-muted);
+}
+
+.form-input:hover,
+.form-textarea:hover {
+  border-color: var(--color-primary);
+}
+
+.form-input:focus-visible,
+.form-textarea:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-color: var(--color-primary);
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.form-note {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.015em;
+  color: var(--color-muted);
+}
+
+.form-status {
+  padding: 12px 14px;
+  border-radius: var(--radius-btn);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border: 1px solid transparent;
+}
+
+.form-status.is-success {
+  background-color: rgba(63, 185, 80, 0.12);
+  border-color: var(--color-success);
+  color: var(--color-text);
+}
+
+.form-status.is-error {
+  background-color: rgba(248, 81, 73, 0.12);
+  border-color: #F85149;
+  color: var(--color-text);
+}
+
+@media (max-width: 640px) {
+  .form-row-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-card {
+    padding: 20px;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+  }
+}
+
 .site-footer {
   border-top: 1px solid var(--color-border-subtle);
   padding-block: 24px 36px;
@@ -1293,6 +1416,7 @@ body {
   .cta-section,
   .booking-actions,
   .calendar-embed-card,
+  .contact-section,
   .back-to-top,
   .eyebrow-pill {
     display: none !important;

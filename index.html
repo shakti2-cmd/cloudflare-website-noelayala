@@ -31,7 +31,7 @@
       } catch (e) {}
     })();
   </script>
-  <link rel="stylesheet" href="./styles.css?v=2" />
+  <link rel="stylesheet" href="./styles.css?v=3" />
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -51,7 +51,7 @@
       }
     }
   </script>
-  <script src="./app.js?v=2" defer></script>
+  <script src="./app.js?v=3" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -73,6 +73,7 @@
           <li><a class="nav-link" href="#stack">Stack</a></li>
           <li><a class="nav-link" href="#credentials">Credentials</a></li>
           <li><a class="nav-link" href="#booking">Book</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </nav>
 
@@ -133,6 +134,7 @@
         <li><a class="mobile-drawer-link" href="#stack">Technical Stack</a></li>
         <li><a class="mobile-drawer-link" href="#credentials">Education &amp; Credentials</a></li>
         <li><a class="mobile-drawer-link" href="#booking">Book a Call</a></li>
+        <li><a class="mobile-drawer-link" href="#contact">Contact Form</a></li>
         <li>
           <button class="btn btn-secondary" type="button" data-print-resume style="width: 100%; margin-top: 6px;">
             Print / Save Resume PDF
@@ -528,6 +530,90 @@
               loading="lazy"
             ></iframe>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="resume-section contact-section" aria-label="Contact form">
+      <div class="container section-grid">
+        <div class="section-rail">
+          <span class="section-kicker">05 / Contact</span>
+          <h2 class="section-heading">Send a Message</h2>
+          <p class="section-note">
+            Prefer async? Send a message directly to my inbox at noeljedayala@gmail.com.
+          </p>
+        </div>
+
+        <div class="contact-form-card" data-reveal>
+          <form
+            id="contact-form"
+            class="contact-form"
+            action="https://formsubmit.co/noeljedayala@gmail.com"
+            method="POST"
+          >
+            <input type="text" name="_honey" style="display: none;" tabindex="-1" autocomplete="off" />
+            <input type="hidden" name="_subject" value="New message from Noel Ayala Resume Site" />
+            <input type="hidden" name="_template" value="table" />
+
+            <div class="form-row-2">
+              <div class="form-field">
+                <label class="form-label" for="contact-name">Name</label>
+                <input
+                  id="contact-name"
+                  class="form-input"
+                  type="text"
+                  name="name"
+                  placeholder="Your name"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="contact-email">Email</label>
+                <input
+                  id="contact-email"
+                  class="form-input"
+                  type="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="contact-subject">Subject</label>
+              <input
+                id="contact-subject"
+                class="form-input"
+                type="text"
+                name="subject"
+                placeholder="Automation project, role, or inquiry"
+              />
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="contact-message">Message</label>
+              <textarea
+                id="contact-message"
+                class="form-textarea"
+                name="message"
+                placeholder="Share a brief overview or question..."
+                required
+              ></textarea>
+            </div>
+
+            <div id="contact-form-status" class="form-status" role="status" aria-live="polite" hidden></div>
+
+            <div class="form-actions">
+              <span class="form-note">Delivers directly to noeljedayala@gmail.com</span>
+              <button id="contact-submit-btn" class="btn btn-primary" type="submit">
+                Send Message
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </section>

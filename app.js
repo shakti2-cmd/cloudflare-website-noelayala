@@ -190,4 +190,62 @@
       el.classList.add("is-visible");
     });
   }
+
+  // 6. Contact Form AJAX Submission (FormSubmit -> noeljedayala@gmail.com)
+  var contactForm = document.getElementById("contact-form");
+  var formStatus = document.getElementById("contact-form-status");
+  var submitBtn = document.getElementById("contact-submit-btn");
+
+  if (contactForm && formStatus && submitBtn) {
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      var honey = contactForm.querySelector('input[name="_honey"]');
+      if (honey && honey.value) return;
+
+      var defaultBtnText = submitBtn.dataset.defaultText || submitBtn.textContent.trim();
+      submitBtn.dataset.defaultText = defaultBtnText;
+      submitBtn.disabled = true;
+      submitBtn.setAttribute("aria-disabled", "true");
+      submitBtn.textContent = "Sending...";
+
+      formStatus.hidden = true;
+      formStatus.className = "form-status";
+
+      var formData = new FormData(contactForm);
+
+      fetch("https://formsubmit.co/ajax/noeljedayala@gmail.com", {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: formData
+      })
+        .then(function (response) {
+          return response.json().then(function (data) {
+            return { ok: response.ok, data: data };
+          });
+        })
+        .then(function (result) {
+          if (result.ok && result.data && result.data.success !== "false") {
+            formStatus.textContent =
+              "Message sent! Thank you for reaching out — Noel will reply shortly.";
+            formStatus.classList.add("is-success");
+            formStatus.hidden = false;
+            contactForm.reset();
+          } else {
+            throw new Error("Submission declined");
+          }
+        })
+        .catch(function () {
+          formStatus.textContent =
+            "Could not send directly right now. Please email noeljedayala@gmail.com directly.";
+          formStatus.classList.add("is-error");
+          formStatus.hidden = false;
+        })
+        .finally(function () {
+          submitBtn.disabled = false;
+          submitBtn.removeAttribute("aria-disabled");
+          submitBtn.textContent = defaultBtnText;
+        });
+    });
+  }
 })();
