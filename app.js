@@ -213,11 +213,18 @@
       formStatus.className = "form-status";
 
       var formData = new FormData(contactForm);
+      var payload = {};
+      formData.forEach(function (value, key) {
+        if (key !== "_honey") payload[key] = value;
+      });
 
       fetch("https://formsubmit.co/ajax/noeljedayala@gmail.com", {
         method: "POST",
-        headers: { Accept: "application/json" },
-        body: formData
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: JSON.stringify(payload)
       })
         .then(function (response) {
           return response.json().then(function (data) {
@@ -225,19 +232,25 @@
           });
         })
         .then(function (result) {
-          if (result.ok && result.data && result.data.success !== "false") {
+          if (result.ok && result.data && (result.data.success === true || result.data.success === "true")) {
             formStatus.textContent =
               "Message sent! Thank you for reaching out — Noel will reply shortly.";
             formStatus.classList.add("is-success");
             formStatus.hidden = false;
             contactForm.reset();
           } else {
-            throw new Error("Submission declined");
+            var serverMsg =
+              result.data && result.data.message
+                ? result.data.message
+                : "Could not send directly right now. Please email noeljedayala@gmail.com directly.";
+            throw new Error(serverMsg);
           }
         })
-        .catch(function () {
+        .catch(function (err) {
           formStatus.textContent =
-            "Could not send directly right now. Please email noeljedayala@gmail.com directly.";
+            err && err.message && err.message !== "Failed to fetch"
+              ? err.message
+              : "Could not send directly right now. Please email noeljedayala@gmail.com directly.";
           formStatus.classList.add("is-error");
           formStatus.hidden = false;
         })
